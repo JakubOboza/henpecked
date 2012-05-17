@@ -1,5 +1,7 @@
 source "http://rubygems.org"
 
+gem "active_support", '~> 3.0'
+
 # Specify your gem's dependencies in henpecked.gemspec
 gemspec
 
