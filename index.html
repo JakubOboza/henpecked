@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Henpecked : Icinga passive checks library" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Henpecked</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/JakubOboza/henpecked">View on GitHub</a>
+
+          <h1 id="project_title">Henpecked</h1>
+          <h2 id="project_tagline">Icinga passive checks library</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/JakubOboza/henpecked/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/JakubOboza/henpecked/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>Henpecked</h3>
+
+<p>Is a lightweight library for Icinga passive checks. It helps you raise alerts in very easy way in your application.</p>
+
+<h3>Usage</h3>
+
+<p>Require me!</p>
+
+<pre><code>require 'henpecked'
+</code></pre>
+
+<p>Config it like this! ( just point where is icinga command file! )</p>
+
+<pre><code>Henpecked.config do
+  cmd_file "/usr/local/icinga/var/rw/icinga.cmd"
+end
+</code></pre>
+
+<p>Raise alarms like this:</p>
+
+<pre><code>Henpecked.push(Henpecked::Alert::AcknowledgeHostProblem.new)
+</code></pre>
+
+<p>That's it folks! 
+If you want to add new alert just push it!</p>
+
+<h3>Custom Alerts</h3>
+
+<p>Just look here :)
+<a href="https://github.com/JakubOboza/henpecked/blob/master/lib/henpecked/base.rb">https://github.com/JakubOboza/henpecked/blob/master/lib/henpecked/base.rb</a></p>
+
+<h3>More Docs!</h3>
+
+<p>It is based on: <a href="http://docs.icinga.org/latest/en/passivechecks.html">http://docs.icinga.org/latest/en/passivechecks.html</a></p>
+
+<h3>Support or Contact</h3>
+
+<p>author: <a href="mailto:jakub.oboza@gmail.com">jakub.oboza@gmail.com</a>, <a href="https://github.com/JakubOboza" class="user-mention">@JakubOboza</a>.
+www: <a href="http://no-fucking-idea.com">http://no-fucking-idea.com</a></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Henpecked maintained by <a href="https://github.com/JakubOboza">JakubOboza</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-17523816-2");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+
+  </body>
+</html>
