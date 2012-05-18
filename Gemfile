@@ -7,3 +7,4 @@ gemspec
 
 gem "rake", "~> 0.9"
 gem "rspec", "~> 2.8.0"
+gem "delorean", "~> 1.2.0"

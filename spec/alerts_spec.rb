@@ -53,4 +53,24 @@ describe Henpecked do
     test.command.should eql("TASTY_COOKIE;") 
   end
 
+  describe "alert classes" do
+
+    before(:each) do
+      Delorean.back_to_the_present
+    end
+
+    it "should have AcknowledgeHostProblem class" do
+      Henpecked::Alert::AcknowledgeHostProblem.new.icinga_description.should_not be_nil
+      Henpecked::Alert::AcknowledgeHostProblemExpire.new.icinga_description.should_not be_nil
+      Henpecked::Alert::SendCustomHostNotification.new.icinga_description.should_not be_nil
+    end
+
+    it "should create correct custom host notification" do
+      Delorean.time_travel_to "01/01/1985" 
+      scn = Henpecked::Alert::SendCustomHostNotification.new(1,1,1,"Test Lol!")
+      scn.icinga_description.should eql("[473428800] SEND_CUSTOM_HOST_NOTIFICATION; 1;1;1;Test Lol!") 
+    end
+
+  end
+
 end
