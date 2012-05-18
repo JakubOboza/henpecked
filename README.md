@@ -1,6 +1,10 @@
 # Heckpacked
 Is a lightweight library for Icinga passive checks. It helps you raise alerts in very easy way in your application :)
 
+## Travis
+Ci status
+[![Build Status](https://secure.travis-ci.org/JakubOboza/henpecked.png?branch=master)](http://travis-ci.org/JakubOboza/henpecked)
+
 ## Passive Checks
 It is implementing passive checks
 <http://docs.icinga.org/latest/en/passivechecks.html>
