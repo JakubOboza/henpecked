@@ -22,7 +22,7 @@ describe Henpecked do
       Henpecked.push(Henpecked::Alert::AcknowledgeHostProblem.new)
       Henpecked.push(Henpecked::Alert::AcknowledgeHostProblem.new)        
       Henpecked.push(Henpecked::Alert::AcknowledgeHostProblem.new)
-      File.foreach("/tmp/henpeck.test").inject(0) {|c, line| c+1}.should eql(2)
+      File.foreach("/tmp/henpeck.test").inject(0) {|c, line| c+1}.should eql(3)
     end
 
   end
